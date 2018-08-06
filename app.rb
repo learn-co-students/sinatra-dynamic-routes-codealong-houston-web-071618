@@ -14,5 +14,17 @@ class App < Sinatra::Base
   end
 
   # Code your final two routes here:
+  get "/goodbye/:name" do
+    @user_name = params[:name]
+    "Goodbye, #{@user_name}."
+  end
+
+
+  get "/multiply/:first/:second" do
+    @product = params[:first].to_i * params[:second].to_i
+    
+    "#{@product}"
+  end
+
 
 end
